@@ -5,6 +5,7 @@ include LICENSE
 include license.json
 include README.md
 include mosec/py.typed
+include mosec/bin/mosec
 
 prune tests
 prune examples
