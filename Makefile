@@ -9,6 +9,12 @@ install:
 	rustup toolchain install nightly
 	rustup component add rustfmt --toolchain nightly
 
+release:
+	cargo build --release
+	@mkdir -p mosec/bin
+	@cp ./target/release/mosec mosec/bin/
+	pip install .
+
 dev:
 	cargo build
 	@mkdir -p mosec/bin
